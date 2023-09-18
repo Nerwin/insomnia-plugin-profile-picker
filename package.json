@@ -1,0 +1,41 @@
+{
+  "name": "insomnia-plugin-profile-picker",
+  "description": "Insomnia plugin for managing dynamic profiles and seamlessly integrating them into your requests",
+  "version": "1.0.0",
+  "author": "Nerwin",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "insomnia": {
+    "name": "Profile Picker",
+    "displayName": "Profile Picker",
+    "description": "Manage dynamic profiles with data and seamlessly integrate them into your requests",
+    "images": {
+      "icon": "src/assets/icon.svg"
+    },
+    "publisher": {
+      "name": "Nerwin"
+    }
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "bunx tsc ",
+    "prepublish": "npm run build",
+    "deploy:dev": "npm run build && ./scripts/deploy.sh $npm_package_name",
+    "lint": "xo",
+    "lint:fix": "xo --fix"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^1.0.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "typescript": "^5.2.2",
+    "xo": "^0.56.0"
+  }
+}

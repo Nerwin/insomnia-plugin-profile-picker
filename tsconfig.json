@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "outDir": "dist",
+    /* Basic Operations */
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "declaration": true,
+    /* Advanced Options */
+    "skipLibCheck": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "noUnusedLocals": false,
+    "noImplicitAny": false,
+    /* Import helpers from tslib */
+    "importHelpers": true,
+  },
+  "include": [
+    "src",
+  ]
+}
