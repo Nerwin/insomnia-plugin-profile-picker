@@ -4,3 +4,4 @@ src/
 tsconfig.json
 .xo-config.json
 .vscode
+bun.lockb

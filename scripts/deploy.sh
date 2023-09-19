@@ -20,13 +20,19 @@ rm -rf "$TARGET_DIR/dist"
 # Copy the build folder and package.json to the target directory
 cp -r ./dist "$TARGET_DIR"
 cp ./package.json "$TARGET_DIR"
-cp ./bun.lockb "$TARGET_DIR"
+if [ -f ./bun.lockb ]; then
+    cp ./bun.lockb "$TARGET_DIR"
+fi
 
 # Move to the target directory
 cd "$TARGET_DIR"
 
 # Install the plugin's NPM packages
-bun install --production --no-summary
+if [ -f ./bun.lockb ]; then
+    bun install --production --no-summary
+else
+    npm ci --omit=dev
+fi
 
 # Move back to previous folder
 cd - > /dev/null

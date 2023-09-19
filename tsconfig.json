@@ -13,9 +13,7 @@
     "strict": true,
     "strictPropertyInitialization": false,
     "noUnusedLocals": false,
-    "noImplicitAny": false,
-    /* Import helpers from tslib */
-    "importHelpers": true,
+    "noImplicitAny": false
   },
   "include": [
     "src",

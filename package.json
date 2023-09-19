@@ -1,7 +1,7 @@
 {
   "name": "insomnia-plugin-profile-picker",
   "description": "Insomnia plugin for managing dynamic profiles and seamlessly integrating them into your requests",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Nerwin",
   "license": "MIT",
   "main": "dist/index.js",
@@ -24,9 +24,6 @@
     "deploy:dev": "npm run build && ./scripts/deploy.sh $npm_package_name",
     "lint": "xo",
     "lint:fix": "xo --fix"
-  },
-  "dependencies": {
-    "tslib": "^2.6.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.0",
